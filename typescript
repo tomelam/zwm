@@ -105,3 +105,112 @@ ruby-2.3.3@rails501
 [1m[32m      create[0m  vendor/assets/stylesheets/.keep
 [1m[32m      remove[0m  config/initializers/cors.rb
 [1m[32m       apply[0m  https://raw.github.com/tomelam/rails-composer/master/composer.rb
+  [1m[36m  composer[0m  [1m[36m[0m
+  [1m[36m  composer[0m  [1m[36m _____       _ _[0m
+  [1m[36m  composer[0m  [1m[36m|  __ \     (_) |       /\[0m
+  [1m[36m  composer[0m  [1m[36m| |__) |__ _ _| |___   /  \   _ __  _ __  ___[0m
+  [1m[36m  composer[0m  [1m[36m|  _  // _` | | / __| / /\ \ | '_ | '_ \/ __|[0m
+  [1m[36m  composer[0m  [1m[36m| | \ \ (_| | | \__ \/ ____ \| |_) | |_) \__ \[0m
+  [1m[36m  composer[0m  [1m[36m|_|  \_\__,_|_|_|___/_/    \_\ .__/| .__/|___/[0m
+  [1m[36m  composer[0m  [1m[36m                             | |   | |[0m
+  [1m[36m  composer[0m  [1m[36m                             | |   | |[0m
+  [1m[36m  composer[0m  [1m[36m[0m
+  [1m[36m  composer[0m  [1m[36mIf you like Rails Composer, will you support it?[0m
+  [1m[36m  composer[0m  [1m[36mYou can help by purchasing our tutorials.[0m
+  [1m[36m  composer[0m  Need help? Ask on Stack Overflow with the tag 'railsapps.'
+  [1m[36m  composer[0m  Your new application will contain diagnostics in its README file.
+  [1m[36m  composer[0m  You are using Rails version 5.0.1. Please report any issues.
+[1m[32m      insert[0m    config/application.rb
+  [1m[36m    recipe[0m  Running core recipe...
+  [1m[36m      core[0m  selected all core recipes
+  [1m[36m    recipe[0m  Running git recipe...
+  [1m[36m       git[0m  initialize git
+[1m[32m      remove[0m    .gitignore
+[1m[32m      create[0m    .gitignore
+[1m[32m         run[0m    git init from "."
+Initialized empty Git repository in /Users/tom/Sites/mashweb.my_rails_composer/.git/
+[1m[32m         run[0m    git add -A from "."
+[1m[32m         run[0m    git commit -qm "rails_apps_composer: initial commit" from "."
+  [1m[36m    recipe[0m  Running railsapps recipe...
+  [1m[36m    option[0m  [1m[36mBuild a starter application?[0m
+  [1m[36m        1)[0m  Build a RailsApps example application
+  [1m[36m        2)[0m  Contributed applications (none available)
+  [1m[36m        3)[0m  Custom application (experimental)
+  [1m[36m    choose[0m  Enter your selection: 3
+  [1m[36m            Get on the mailing list for Rails Composer news?[0m
+  [1m[36m    option[1m[36m  Enter your email address:[0m 
+  [1m[36m    recipe[0m  Running learn_rails recipe...
+  [1m[36m    recipe[0m  Running rails_bootstrap recipe...
+  [1m[36m    recipe[0m  Running rails_foundation recipe...
+  [1m[36m    recipe[0m  Running rails_omniauth recipe...
+  [1m[36m    recipe[0m  Running rails_devise recipe...
+  [1m[36m    recipe[0m  Running rails_devise_roles recipe...
+  [1m[36m    recipe[0m  Running rails_devise_pundit recipe...
+  [1m[36m    recipe[0m  Running rails_signup_download recipe...
+  [1m[36m    recipe[0m  Running rails_mailinglist_activejob recipe...
+  [1m[36m    recipe[0m  Running rails_stripe_checkout recipe...
+  [1m[36m    recipe[0m  Running rails_stripe_coupons recipe...
+  [1m[36m    recipe[0m  Running rails_stripe_membership_saas recipe...
+  [1m[36m    recipe[0m  Running setup recipe...
+  [1m[36m     setup[0m  Your operating system is darwin16.1.0.
+  [1m[36m     setup[0m  You are using Ruby version 2.3.3.
+  [1m[36m     setup[0m  You are using Rails version 5.0.1.
+  [1m[36m    option[0m  [1m[36mWeb server for development?[0m
+  [1m[36m        1)[0m  Puma (default)
+  [1m[36m        2)[0m  Thin
+  [1m[36m        3)[0m  Unicorn
+  [1m[36m        4)[0m  Phusion Passenger (Apache/Nginx)
+  [1m[36m        5)[0m  Phusion Passenger (Standalone)
+  [1m[36m    choose[0m  Enter your selection: 1
+  [1m[36m    option[0m  [1m[36mWeb server for production?[0m
+  [1m[36m        1)[0m  Same as development
+  [1m[36m        2)[0m  Thin
+  [1m[36m        3)[0m  Unicorn
+  [1m[36m        4)[0m  Phusion Passenger (Apache/Nginx)
+  [1m[36m        5)[0m  Phusion Passenger (Standalone)
+  [1m[36m    choose[0m  Enter your selection: 1
+  [1m[36m    option[0m  [1m[36mDatabase used in development?[0m
+  [1m[36m        1)[0m  SQLite
+  [1m[36m        2)[0m  PostgreSQL
+  [1m[36m        3)[0m  MySQL
+  [1m[36m    choose[0m  Enter your selection: 1
+  [1m[36m    option[0m  [1m[36mTemplate engine?[0m
+  [1m[36m        1)[0m  ERB
+  [1m[36m        2)[0m  Haml
+  [1m[36m        3)[0m  Slim
+  [1m[36m    choose[0m  Enter your selection: 1
+  [1m[36m    option[0m  [1m[36mTest framework?[0m
+  [1m[36m        1)[0m  None
+  [1m[36m        2)[0m  RSpec with Capybara
+  [1m[36m    choose[0m  Enter your selection: 2
+  [1m[36m     setup[0m  Adding DatabaseCleaner, FactoryGirl, Faker, Launchy, Selenium
+  [1m[36m    option[0m  [1m[36mContinuous testing?[0m
+  [1m[36m        1)[0m  None
+  [1m[36m        2)[0m  Guard
+  [1m[36m    choose[0m  Enter your selection: 1
+  [1m[36m    option[0m  [1m[36mFront-end framework?[0m
+  [1m[36m        1)[0m  None
+  [1m[36m        2)[0m  Bootstrap 4.0
+  [1m[36m        3)[0m  Bootstrap 3.3
+  [1m[36m        4)[0m  Bootstrap 2.3
+  [1m[36m        5)[0m  Zurb Foundation 5.5
+  [1m[36m        6)[0m  Zurb Foundation 4.0
+  [1m[36m        7)[0m  Simple CSS
+  [1m[36m    choose[0m  Enter your selection: 3
+  [1m[36m    option[0m  [1m[36mAdd support for sending email?[0m
+  [1m[36m        1)[0m  None
+  [1m[36m        2)[0m  Gmail
+  [1m[36m        3)[0m  SMTP
+  [1m[36m        4)[0m  SendGrid
+  [1m[36m        5)[0m  Mandrill
+  [1m[36m    choose[0m  Enter your selection: 2
+  [1m[36m    option[0m  [1m[36mAuthentication?[0m
+  [1m[36m        1)[0m  None
+  [1m[36m        2)[0m  Devise
+  [1m[36m        3)[0m  OmniAuth
+  [1m[36m    choose[0m  Enter your selection: 2
+  [1m[36m    option[0m  [1m[36mDevise modules?[0m
+  [1m[36m        1)[0m  Devise with default modules
+  [1m[36m        2)[0m  Devise with Confirmable module
+  [1m[36m        3)[0m  Devise with Confirmable and Invitable modules
+  [1m[36m    choose[0m  Enter your selection: 
