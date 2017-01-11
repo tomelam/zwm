@@ -645,4 +645,22 @@ Expected string default value for '--jbuilder'; got true (boolean)
 [1m[32m      create[0m  app/views/users/index.html.erb
 [1m[32m      create[0m  app/views/users/show.html.erb
 [1m[32m    generate[0m  pages:home -f
-Expected string default value for '--jbuilder'; got t
+Expected string default value for '--jbuilder'; got true (boolean)
+[1m[34m   identical[0m  spec/features/visitors/home_page_spec.rb
+[1m[33m       force[0m  app/views/visitors/index.html.erb
+[1m[32m      create[0m  app/controllers/users_controller.rb
+[1m[32m      insert[0m  config/routes.rb
+[1m[32m      insert[0m  app/controllers/application_controller.rb
+[1m[32m     prepend[0m  app/views/users/_user.html.erb
+[1m[32m      insert[0m  app/views/users/show.html.erb
+[1m[32m    generate[0m    pages:authorized -f
+Expected string default value for '--jbuilder'; got true (boolean)
+[1m[32m      create[0m  config/initializers/pundit.rb
+[1m[33m       force[0m  app/views/users/_user.html.erb
+[1m[33m       force[0m  app/controllers/users_controller.rb
+[1m[32m      create[0m  app/policies/user_policy.rb
+[1m[32m         run[0m    git add -A from "."
+[1m[32m         run[0m    git commit -qm "rails_apps_composer: add pages" from "."
+analytics
+  [1m[36m analytics[0m  recipe stage two
+[1m[32m    generate[0m    analytics:google -f
