@@ -213,4 +213,254 @@ Initialized empty Git repository in /Users/tom/Sites/mashweb.my_rails_composer/.
   [1m[36m        1)[0m  Devise with default modules
   [1m[36m        2)[0m  Devise with Confirmable module
   [1m[36m        3)[0m  Devise with Confirmable and Invitable modules
-  [1m[36m    choose[0m  Enter your selection: 
+  [1m[36m    choose[0m  Enter your selection: 2
+  [1m[36m    option[0m  [1m[36mAuthorization?[0m
+  [1m[36m        1)[0m  None
+  [1m[36m        2)[0m  Simple role-based
+  [1m[36m        3)[0m  Pundit
+  [1m[36m    choose[0m  Enter your selection: 3
+  [1m[36m    option[0m  [1m[36mAdmin interface for database?[0m
+  [1m[36m        1)[0m  None
+  [1m[36m        2)[0m  Thoughtbot Administrate
+  [1m[36m    choose[0m  Enter your selection: 2
+  [1m[36m    option[0m  [1m[36mUse a form builder gem?[0m
+  [1m[36m        1)[0m  None
+  [1m[36m        2)[0m  SimpleForm
+  [1m[36m    choose[0m  Enter your selection: 2
+  [1m[36m    option[0m  [1m[36mAdd pages?[0m
+  [1m[36m        1)[0m  None
+  [1m[36m        2)[0m  Home
+  [1m[36m        3)[0m  Home and About
+  [1m[36m        4)[0m  Home and Users
+  [1m[36m        5)[0m  Home, About, and Users
+  [1m[36m    choose[0m  Enter your selection: 5
+  [1m[36m     setup[0m  Which Bootstrap page template? Visit startbootstrap.com.
+  [1m[36m    option[0m  [1m[36mAdd Bootstrap page templates?[0m
+  [1m[36m        1)[0m  None
+  [1m[36m        2)[0m  1 Col Portfolio
+  [1m[36m        3)[0m  2 Col Portfolio
+  [1m[36m        4)[0m  3 Col Portfolio
+  [1m[36m        5)[0m  4 Col Portfolio
+  [1m[36m        6)[0m  Bare
+  [1m[36m        7)[0m  Blog Home
+  [1m[36m        8)[0m  Business Casual
+  [1m[36m        9)[0m  Business Frontpage
+  [1m[36m       10)[0m  Clean Blog
+  [1m[36m       11)[0m  Full Width Pics
+  [1m[36m       12)[0m  Heroic Features
+  [1m[36m       13)[0m  Landing Page
+  [1m[36m       14)[0m  Modern Business
+  [1m[36m       15)[0m  One Page Wonder
+  [1m[36m       16)[0m  Portfolio Item
+  [1m[36m       17)[0m  Round About
+  [1m[36m       18)[0m  Shop Homepage
+  [1m[36m       19)[0m  Shop Item
+  [1m[36m       20)[0m  Simple Sidebar
+  [1m[36m       21)[0m  Small Business
+  [1m[36m       22)[0m  Stylish Portfolio
+  [1m[36m       23)[0m  The Big Picture
+  [1m[36m       24)[0m  Thumbnail Gallery
+  [1m[36m    choose[0m  Enter your selection: 14
+[1m[32m      create[0m    config/railscomposer.yml
+[1m[32m      append[0m    config/railscomposer.yml
+  [1m[36m    recipe[0m  Running locale recipe...
+  [1m[36m    option[1m[36m  Set a locale? Enter nothing for English, or es, de, etc:[0m 
+  [1m[36m    recipe[0m  Running readme recipe...
+  [1m[36m    recipe[0m  Running gems recipe...
+[1m[32m      insert[0m    Gemfile
+[1m[32m        gsub[0m    Gemfile
+[1m[32m        gsub[0m    Gemfile
+[1m[32m        gsub[0m    Gemfile
+[1m[32m        gsub[0m    Gemfile
+[1m[32m         run[0m    git add -A from "."
+[1m[32m         run[0m    git commit -qm "rails_apps_composer: Gemfile" from "."
+  [1m[36m    recipe[0m  Running tests recipe...
+  [1m[36m    recipe[0m  Running email recipe...
+  [1m[36m    recipe[0m  Running devise recipe...
+  [1m[36m    recipe[0m  Running omniauth recipe...
+  [1m[36m    recipe[0m  Running roles recipe...
+  [1m[36m    recipe[0m  Running frontend recipe...
+  [1m[36m    recipe[0m  Running pages recipe...
+  [1m[36m    recipe[0m  Running init recipe...
+  [1m[36m    recipe[0m  Running analytics recipe...
+  [1m[36m    option[0m  [1m[36mInstall page-view analytics?[0m
+  [1m[36m        1)[0m  None
+  [1m[36m        2)[0m  Google Analytics
+  [1m[36m        3)[0m  Segment.com
+  [1m[36m    choose[0m  Enter your selection: 2
+  [1m[36m    option[1m[36m  Google Analytics ID?[0m UA-89616505-1
+  [1m[36m    recipe[0m  Running deployment recipe...
+  [1m[36m    option[0m  [1m[36mPrepare for deployment?[0m
+  [1m[36m        1)[0m  no
+  [1m[36m        2)[0m  Heroku
+  [1m[36m        3)[0m  Capistrano
+  [1m[36m    choose[0m  Enter your selection: 2
+  [1m[36mdeployment[0m  installing gems for Heroku
+[1m[32m        gsub[0m    Gemfile
+  [1m[36m    recipe[0m  Running extras recipe...
+  [1m[36m    option[1m[36m  Disable Rails Turbolinks? [33m(y/n)[0m[0m y
+  [1m[36m    option[1m[36m  Set a robots.txt file to ban spiders? [33m(y/n)[0m[0m n
+  [1m[36m    option[1m[36m  Create a GitHub repository? [33m(y/n)[0m[0m n
+  [1m[36m    option[0m  [1m[36mAdd gem and file for environment variables?[0m
+  [1m[36m        1)[0m  None
+  [1m[36m        2)[0m  Add .env with Foreman
+  [1m[36m    choose[0m  Enter your selection: 2
+  [1m[36m    option[1m[36m  Improve error reporting with 'better_errors' during development? [33m(yy/n)[0m[0m y
+  [1m[36m    option[1m[36m  Use 'pry' as console replacement during development and test? [33m(y/n))[0m[0m n
+  [1m[36m    option[1m[36m  Use 'rubocop' to ensure that your code conforms to the Ruby style gguide? [33m(y/n)[0m[0m y
+  [1m[36m    extras[0m  recipe creating .env file for development environment variables with foreman
+  [1m[36m    extras[0m  recipe adding better_errors gem
+  [1m[36m    extras[0m  recipe adding rubocop gem and basic .rubocop.yml
+[1m[32m      remove[0m    .rubocop.yml
+[1m[32m      create[0m    .rubocop.yml
+  [1m[36m    extras[0m  recipe removing support for Rails Turbolinks
+  [1m[36m  composer[0m  Installing Bundler (in case it is not installed).
+[1m[32m         run[0m    gem install bundler from "."
+Successfully installed bundler-1.13.7
+Parsing documentation for bundler-1.13.7
+Done installing documentation for bundler after 4 seconds
+1 gem installed
+  [1m[36m  composer[0m  Installing gems. This will take a while.
+[1m[32m         run[0m    bundle install --without production from "."
+Fetching gem metadata from https://rubygems.org/.........
+Fetching version metadata from https://rubygems.org/..
+Fetching dependency metadata from https://rubygems.org/.
+Resolving dependencies....
+Using rake 12.0.0
+Using concurrent-ruby 1.0.4
+Using i18n 0.7.0
+Using minitest 5.10.1
+Using thread_safe 0.3.5
+Using builder 3.2.2
+Using erubis 2.7.0
+Using mini_portile2 2.1.0
+Using rack 2.0.1
+Using nio4r 1.2.1
+Using websocket-extensions 0.1.2
+Using mime-types-data 3.2016.0521
+Using arel 7.1.4
+Using public_suffix 2.0.5
+Using execjs 2.7.0
+Using sass 3.4.23
+Using thor 0.19.4
+Using method_source 0.8.2
+Using normalize-rails 3.0.3
+Using bundler 1.13.7
+Using tilt 2.0.5
+Using selectize-rails 0.12.4
+Using ast 2.3.0
+Using bcrypt 3.1.11
+Using coderay 1.1.1
+Using byebug 9.0.6
+Using ffi 1.9.14
+Using coffee-script-source 1.12.2
+Using database_cleaner 1.5.3
+Using debug_inspector 0.0.2
+Using orm_adapter 0.5.0
+Using diff-lcs 1.2.5
+Using high_voltage 3.0.0
+Using multi_json 1.12.1
+Using rb-fsevent 0.9.8
+Using powerpack 0.1.1
+Using puma 3.6.2
+Using rails_apps_pages 0.6.7
+Using rails_apps_testing 0.3.12
+Using rails_layout 1.0.34
+Using rainbow 2.2.1
+Using rspec-support 3.5.0
+Using ruby-progressbar 1.8.1
+Using unicode-display_width 1.1.2
+Using rubyzip 1.2.0
+Using websocket 1.2.3
+Using sqlite3 1.3.13
+Using turbolinks-source 5.0.0
+Using faker 1.7.2
+Using tzinfo 1.2.2
+Using nokogiri 1.7.0.1
+Using rack-test 0.6.3
+Using sprockets 3.7.1
+Using warden 1.2.6
+Using websocket-driver 0.6.4
+Using mime-types 3.1
+Using addressable 2.5.0
+Using autoprefixer-rails 6.6.1
+Using uglifier 3.0.4
+Using bourbon 4.2.7
+Using neat 1.8.0
+Using foreman 0.82.0
+Using parser 2.3.3.1
+Using better_errors 2.1.1
+Using childprocess 0.5.9
+Using rb-inotify 0.9.7
+Using coffee-script 2.4.1
+Using rspec-core 3.5.4
+Using rspec-expectations 3.5.0
+Using rspec-mocks 3.5.0
+Using turbolinks 5.0.1
+Using activesupport 5.0.1
+Using loofah 2.0.3
+Using xpath 2.0.0
+Using mail 2.6.4
+Using launchy 2.4.3
+Using bootstrap-sass 3.3.7
+Using rubocop 0.46.0
+Using selenium-webdriver 3.0.5
+Using listen 3.0.8
+Using rails-dom-testing 2.0.2
+Using globalid 0.3.7
+Using activemodel 5.0.1
+Using factory_girl 4.8.0
+Using jbuilder 2.6.1
+Using pundit 1.1.0
+Using spring 2.0.0
+Using rails-html-sanitizer 1.0.3
+Using capybara 2.11.0
+Using activejob 5.0.1
+Using activerecord 5.0.1
+Using spring-commands-rspec 1.0.4
+Using spring-watcher-listen 2.0.1
+Using actionview 5.0.1
+Using actionpack 5.0.1
+Using actioncable 5.0.1
+Using actionmailer 5.0.1
+Using railties 5.0.1
+Using kaminari 0.17.0
+Using sprockets-rails 3.2.0
+Using simple_form 3.4.0
+Using momentjs-rails 2.15.1
+Using jquery-rails 4.2.2
+Using coffee-rails 4.2.1
+Using responders 2.3.0
+Using factory_girl_rails 4.8.0
+Using rspec-rails 3.5.2
+Using web-console 3.4.0
+Using rails 5.0.1
+Using sass-rails 5.0.6
+Using datetime_picker_rails 0.0.7
+Using devise 4.2.0
+Using administrate 0.3.0
+[32mBundle complete! 37 Gemfile dependencies, 113 gems now installed.[0m
+[32mGems in the group production were not installed.[0m
+[32mUse `bundle show [gemname]` to see where a bundled gem is installed.[0m
+  [1m[36m  composer[0m  Updating gem paths.
+WARN: Unresolved specs during Gem::Specification.reset:
+      minitest (~> 5.1)
+      rake (>= 0.8.7)
+WARN: Clearing out unresolved specs.
+Please report a bug if this causes problems.
+  [1m[36m  composer[0m  Stage Two (running recipe 'stage_two' callbacks).
+locale
+gems
+  [1m[36m      gems[0m  recipe stage two
+  [1m[36m      gems[0m  configuring database
+gems
+  [1m[36m      gems[0m  recipe stage two
+  [1m[36m      gems[0m  running generators
+  [1m[36m      gems[0m  recipe installing simple_form for use with Bootstrap
+[1m[32m    generate[0m    simple_form:install --bootstrap
+[Simple Form] Simple Form is not configured in the application and will use the default values. Use `rails generate simple_form:install` to generate the Simple Form configuration.
+Expected string default value for '--jbuilder'; got true (boolean)
+[1m[32m      create[0m  config/initializers/simple_form.rb
+[1m[32m      create[0m  config/initializers/simple_form_bootstrap.rb
+[1m[34m       exist[0m  config/locales
+[1m[
