@@ -748,3 +748,72 @@ CREATED ADMIN USER: user@example.com
 [1m[32m         run[0m    git add -A from "."
 [1m[32m         run[0m    git commit -qm "rails_apps_composer: set up database" from "."
 [1m[32m    generate[0m    layout:devise bootstrap3 -f
+Expected string default value for '--jbuilder'; got true (boolean)
+[1m[32m      create[0m  app/views/devise/sessions/new.html.erb
+[1m[32m      create[0m  app/views/devise/passwords/new.html.erb
+[1m[32m      create[0m  app/views/devise/passwords/edit.html.erb
+[1m[32m      create[0m  app/views/devise/registrations/new.html.erb
+[1m[32m      create[0m  app/views/devise/registrations/edit.html.erb
+[1m[32m        gsub[0m  app/views/devise/registrations/new.html.erb
+[1m[32m        gsub[0m  app/views/devise/registrations/edit.html.erb
+[1m[32m      insert[0m  app/views/devise/registrations/new.html.erb
+[1m[32m      insert[0m  app/views/devise/registrations/edit.html.erb
+[1m[32m    generate[0m    layout:navigation -f
+Expected string default value for '--jbuilder'; got true (boolean)
+[1m[34m   identical[0m  app/views/layouts/_navigation_links.html.erb
+[1m[32m      append[0m  app/views/layouts/_navigation_links.html.erb
+[1m[32m      create[0m  app/views/layouts/_nav_links_for_auth.html.erb
+[1m[32m      append[0m  app/views/layouts/_nav_links_for_auth.html.erb
+[1m[32m      insert[0m  app/views/layouts/_nav_links_for_auth.html.erb
+[1m[32m        gsub[0m  app/views/layouts/_navigation.html.erb
+[1m[32m      create[0m  spec/features/visitors/navigation_spec.rb
+[1m[32m         run[0m    git add -A from "."
+[1m[32m         run[0m    git commit -qm "rails_apps_composer: navigation links" from "."
+deployment
+[1m[32m         run[0m    git add -A from "."
+[1m[32m         run[0m    git commit -qm "rails_apps_composer: prepare for deployment" from "."
+On branch master
+nothing to commit, working tree clean
+  [1m[36m  composer[0m  Stage Four (running recipe 'stage_four' callbacks).
+pages
+  [1m[36m     pages[0m  recipe stage four
+[1m[32m    generate[0m    administrate:install
+Expected string default value for '--jbuilder'; got true (boolean)
+[1m[32m       route[0m  namespace :admin do
+    resources :users
+
+    root to: "users#index"
+  end
+WARNING: Unable to generate a dashboard for ApplicationRecord.
+         It is not connected to a database table.
+         Make sure your database migrations are up to date.
+[1m[32m      create[0m  app/controllers/admin/application_controller.rb
+[1m[32m      create[0m  app/dashboards/user_dashboard.rb
+[1m[32m      create[0m  app/controllers/admin/users_controller.rb
+[1m[32m    generate[0m    theme:modern_business -f
+Expected string default value for '--jbuilder'; got true (boolean)
+[1m[33m       force[0m  app/views/layouts/application.html.erb
+[1m[32m      create[0m  app/views/layouts/_footer.html.erb
+[1m[33m       force[0m  app/views/visitors/index.html.erb
+[1m[32m      create[0m  app/views/pages/404.html.erb
+[1m[32m      remove[0m  app/views/pages/about.html.erb
+[1m[32m      create[0m  app/views/pages/about.html.erb
+[1m[32m      create[0m  app/views/pages/blog-home-1.html.erb
+[1m[32m      create[0m  app/views/pages/blog-home-2.html.erb
+[1m[32m      create[0m  app/views/pages/blog-post.html.erb
+[1m[32m      create[0m  app/views/pages/contact.html.erb
+[1m[32m      create[0m  app/views/pages/faq.html.erb
+[1m[32m      create[0m  app/views/pages/full-width.html.erb
+[1m[32m      create[0m  app/views/pages/portfolio-1-col.html.erb
+[1m[32m      create[0m  app/views/pages/portfolio-2-col.html.erb
+[1m[32m      create[0m  app/views/pages/portfolio-3-col.html.erb
+[1m[32m      create[0m  app/views/pages/portfolio-4-col.html.erb
+[1m[32m      create[0m  app/views/pages/portfolio-item.html.erb
+[1m[32m      create[0m  app/views/pages/pricing.html.erb
+[1m[32m      create[0m  app/views/pages/services.html.erb
+[1m[32m      create[0m  app/views/pages/sidebar.html.erb
+[1m[32m      create[0m  app/assets/stylesheets/modern-business.css
+[1m[32m      insert[0m  app/views/layouts/_navigation_links.html.erb
+[1m[32m        gsub[0m  app/views/layouts/_navigation.html.erb
+[1m[32m         run[0m    git add -A from "."
+[1
