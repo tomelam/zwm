@@ -741,4 +741,10 @@ init
 == 20170111104045 AddRoleToUsers: migrating ===================================
 -- add_column(:users, :role, :integer)
    -> 0.0050s
-== 201701
+== 20170111104045 AddRoleToUsers: migrated (0.0051s) ==========================
+
+[1m[32m         run[0m    foreman run bundle exec rake db:seed from "."
+CREATED ADMIN USER: user@example.com
+[1m[32m         run[0m    git add -A from "."
+[1m[32m         run[0m    git commit -qm "rails_apps_composer: set up database" from "."
+[1m[32m    generate[0m    layout:devise bootstrap3 -f
