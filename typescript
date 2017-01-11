@@ -567,3 +567,82 @@ Expected string default value for '--jbuilder'; got true (boolean)
 [1m[37m      invoke[0m  active_record
 [1m[32m      create[0m    db/migrate/20170111104036_add_confirmable_to_users.rb
 [1m[32m         run[0m    bundle exec rake db:migrate from "."
+== 20170111104028 DeviseCreateUsers: migrating ================================
+-- create_table(:users)
+   -> 0.0049s
+-- add_index(:users, :email, {:unique=>true})
+   -> 0.0006s
+-- add_index(:users, :reset_password_token, {:unique=>true})
+   -> 0.0006s
+== 20170111104028 DeviseCreateUsers: migrated (0.0063s) =======================
+
+== 20170111104032 AddNameToUsers: migrating ===================================
+-- add_column(:users, :name, :string)
+   -> 0.0005s
+== 20170111104032 AddNameToUsers: migrated (0.0006s) ==========================
+
+== 20170111104036 AddConfirmableToUsers: migrating ============================
+-- add_column(:users, :confirmation_token, :string)
+   -> 0.0005s
+-- add_column(:users, :confirmed_at, :datetime)
+   -> 0.0003s
+-- add_column(:users, :confirmation_sent_at, :datetime)
+   -> 0.0003s
+-- add_column(:users, :unconfirmed_email, :string)
+   -> 0.0003s
+== 20170111104036 AddConfirmableToUsers: migrated (0.0015s) ===================
+
+[1m[32m         run[0m    git add -A from "."
+[1m[32m         run[0m    git commit -qm "rails_apps_composer: devise" from "."
+omniauth
+  [1m[36m  omniauth[0m  recipe stage two
+[1m[32m         run[0m    git add -A from "."
+[1m[32m         run[0m    git commit -qm "rails_apps_composer: omniauth" from "."
+On branch master
+nothing to commit, working tree clean
+roles
+  [1m[36m     roles[0m  recipe stage two
+[1m[32m    generate[0m    migration AddRoleToUsers role:integer
+Expected string default value for '--jbuilder'; got true (boolean)
+[1m[37m      invoke[0m  active_record
+[1m[32m      create[0m    db/migrate/20170111104045_add_role_to_users.rb
+[1m[32m      insert[0m    app/models/user.rb
+[1m[32m         run[0m    git add -A from "."
+[1m[32m         run[0m    git commit -qm "rails_apps_composer: add roles to a User model" from "."
+frontend
+  [1m[36m  frontend[0m  recipe stage two
+[1m[32m    generate[0m    layout:install bootstrap3 -f
+Expected string default value for '--jbuilder'; got true (boolean)
+[1m[32m      remove[0m  app/assets/stylesheets/application.css
+[1m[32m      create[0m  app/assets/stylesheets/application.css.scss
+[1m[32m      create[0m  app/assets/stylesheets/1st_load_framework.css.scss
+[1m[33m       force[0m  app/assets/javascripts/application.js
+[1m[32m      remove[0m  app/assets/stylesheets/simple.css
+[1m[32m      remove[0m  app/assets/stylesheets/foundation_and_overrides.css.scss
+[1m[32m      append[0m  app/assets/stylesheets/1st_load_framework.css.scss
+[1m[32m      remove[0m  app/views/layouts/application.html.erb
+[1m[32m      create[0m  app/views/layouts/application.html.erb
+[1m[32m      create[0m  app/views/layouts/_messages.html.erb
+[1m[32m      create[0m  app/views/layouts/_navigation.html.erb
+[1m[32m      create[0m  app/views/layouts/_navigation_links.html.erb
+[1m[32m         run[0m    git add -A from "."
+[1m[32m         run[0m    git commit -qm "rails_apps_composer: front-end framework" from "."
+pages
+  [1m[36m     pages[0m  recipe stage two
+[1m[32m    generate[0m    pages:about -f
+Expected string default value for '--jbuilder'; got true (boolean)
+[1m[32m    generate[0m  pages:home -f
+Expected string default value for '--jbuilder'; got true (boolean)
+[1m[32m      create[0m  app/views/visitors/index.html.erb
+[1m[32m      create[0m  app/controllers/visitors_controller.rb
+[1m[32m      insert[0m  config/routes.rb
+[1m[32m      create[0m  spec/features/visitors/home_page_spec.rb
+[1m[32m      create[0m  app/views/pages/about.html.erb
+[1m[32m      create[0m  spec/features/visitors/about_page_spec.rb
+[1m[32m    generate[0m    pages:users -f
+Expected string default value for '--jbuilder'; got true (boolean)
+[1m[32m      create[0m  app/views/users/_user.html.erb
+[1m[32m      create[0m  app/views/users/index.html.erb
+[1m[32m      create[0m  app/views/users/show.html.erb
+[1m[32m    generate[0m  pages:home -f
+Expected string default value for '--jbuilder'; got t
