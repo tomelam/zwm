@@ -463,4 +463,107 @@ Expected string default value for '--jbuilder'; got true (boolean)
 [1m[32m      create[0m  config/initializers/simple_form.rb
 [1m[32m      create[0m  config/initializers/simple_form_bootstrap.rb
 [1m[34m       exist[0m  config/locales
-[1m[
+[1m[32m      create[0m  config/locales/simple_form.en.yml
+[1m[32m      create[0m  lib/templates/erb/scaffold/_form.html.erb
+===============================================================================
+
+  Be sure to have a copy of the Bootstrap stylesheet available on your
+  application, you can get it on http://getbootstrap.com/.
+
+  Inside your views, use the 'simple_form_for' with one of the Bootstrap form
+  classes, '.form-horizontal' or '.form-inline', as the following:
+
+    = simple_form_for(@user, html: { class: 'form-horizontal' }) do |form|
+
+===============================================================================
+[1m[32m      create[0m    .env
+[1m[32m         run[0m    git add -A from "."
+[1m[32m         run[0m    git commit -qm "rails_apps_composer: generators" from "."
+tests
+  [1m[36m     tests[0m  recipe stage two
+  [1m[36m     tests[0m  recipe installing RSpec
+[1m[32m    generate[0m    testing:configure rspec -f
+Expected string default value for '--jbuilder'; got true (boolean)
+[1m[32m         run[0m  rm -rf test/ from "."
+[1m[32m    generate[0m  rspec:install
+Expected string default value for '--jbuilder'; got true (boolean)
+[1m[32m      create[0m  .rspec
+[1m[32m      create[0m  spec
+[1m[32m      create[0m  spec/spec_helper.rb
+[1m[32m      create[0m  spec/rails_helper.rb
+[1m[32m      insert[0m  .rspec
+[1m[32m      insert[0m  .rspec
+[1m[32m        gsub[0m  .rspec
+[1m[32m      insert[0m  config/application.rb
+[1m[32m      create[0m  spec/support/capybara.rb
+[1m[32m        gsub[0m  spec/rails_helper.rb
+[1m[32m        gsub[0m  spec/rails_helper.rb
+[1m[32m      create[0m  spec/support/database_cleaner.rb
+[1m[32m      create[0m  spec/support/factory_girl.rb
+[1m[32m         run[0m    git add -A from "."
+[1m[32m         run[0m    git commit -qm "rails_apps_composer: testing framework" from "."
+email
+  [1m[36m     email[0m  recipe stage two
+[1m[32m      insert[0m    config/environments/development.rb
+[1m[32m      insert[0m    config/environments/production.rb
+[1m[32m        gsub[0m    config/environments/production.rb
+[1m[32m      insert[0m    config/environments/development.rb
+[1m[32m      insert[0m    config/environments/production.rb
+[1m[32m         run[0m    git add -A from "."
+[1m[32m         run[0m    git commit -qm "rails_apps_composer: set email accounts" from "."
+devise
+  [1m[36m    devise[0m  recipe stage two
+[1m[32m        gsub[0m    config/initializers/filter_parameter_logging.rb
+[1m[32m    generate[0m    devise:install
+Expected string default value for '--jbuilder'; got true (boolean)
+[1m[32m      create[0m  config/initializers/devise.rb
+[1m[32m      create[0m  config/locales/devise.en.yml
+===============================================================================
+
+Some setup you must do manually if you haven't yet:
+
+  1. Ensure you have defined default url options in your environments files. Here
+     is an example of default_url_options appropriate for a development environment
+     in config/environments/development.rb:
+
+       config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+     In production, :host should be set to the actual host of your application.
+
+  2. Ensure you have defined root_url to *something* in your config/routes.rb.
+     For example:
+
+       root to: "home#index"
+
+  3. Ensure you have flash messages in app/views/layouts/application.html.erb.
+     For example:
+
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+
+  4. You can copy Devise views (for customization) to your app by running:
+
+       rails g devise:views
+
+===============================================================================
+[1m[32m    generate[0m    devise user
+Expected string default value for '--jbuilder'; got true (boolean)
+[1m[37m      invoke[0m  active_record
+[1m[32m      create[0m    db/migrate/20170111104028_devise_create_users.rb
+[1m[32m      create[0m    app/models/user.rb
+[1m[37m      invoke[0m    rspec
+[1m[32m      create[0m      spec/models/user_spec.rb
+[1m[37m      invoke[0m      factory_girl
+[1m[32m      create[0m        spec/factories/users.rb
+[1m[32m      insert[0m    app/models/user.rb
+[1m[32m       route[0m  devise_for :users
+[1m[32m    generate[0m    migration AddNameToUsers name:string
+Expected string default value for '--jbuilder'; got true (boolean)
+[1m[37m      invoke[0m  active_record
+[1m[32m      create[0m    db/migrate/20170111104032_add_name_to_users.rb
+[1m[32m        gsub[0m    app/models/user.rb
+[1m[32m    generate[0m    migration AddConfirmableToUsers confirmation_token:string confirmed_at:datetime confirmation_sent_at:datetime unconfirmed_email:string
+Expected string default value for '--jbuilder'; got true (boolean)
+[1m[37m      invoke[0m  active_record
+[1m[32m      create[0m    db/migrate/20170111104036_add_confirmable_to_users.rb
+[1m[32m         run[0m    bundle exec rake db:migrate from "."
