@@ -57,10 +57,10 @@ Thredded.messageboards_order = :position
 
 # ==> Email Configuration
 # Email "From:" field will use the following
-# Thredded.email_from = 'no-reply@example.com'
+Thredded.email_from = 'no-reply@zwm.org.in'
 
 # Emails going out will prefix the "Subject:" with the following string
-# Thredded.email_outgoing_prefix = '[My Forum] '
+Thredded.email_outgoing_prefix = '[Zero-Waste Mysuru] '
 
 # ==> View Configuration
 # Set the layout for rendering the thredded views.
@@ -129,10 +129,29 @@ Thredded.layout = 'thredded/application'
 # Change how users can choose to be notified, by adding notifiers here, or removing the initializer altogether
 #
 # default:
-# Thredded.notifiers = [Thredded::EmailNotifier.new]
+Thredded.notifiers = [Thredded::EmailNotifier.new]
 #
 # none:
 # Thredded.notifiers = []
 #
 # add in (must install separate gem (under development) as well):
 # Thredded.notifiers = [Thredded::EmailNotifier.new, Thredded::PushoverNotifier.new(ENV['PUSHOVER_APP_ID'])]
+
+# From https://gist.github.com/timdiggins/bf6d09b28828a392198562c93554ad07
+#
+# To allow you to not to have to add `main_app` before every path helper 
+# when embedding Thredded within a main-app supplied layout (with navbar and
+# links to the main_app) add this to the bottom of the initializer:
+
+Rails.application.config.to_prepare do
+  Rails.application.reload_routes!
+  thredded_methods = (Thredded::Engine.routes.url_helpers.methods + Thredded::UrlsHelper.instance_methods)
+    .select { |s| s.to_s.ends_with?("_path", "_url") }
+  main_app_delegator = Module.new do
+    Rails.application.routes.url_helpers.methods
+      .select { |m| m.to_s.ends_with?('_path', '_url') }
+      .reject { |m| thredded_methods.include?(m).tap { |r| Rails.logger.warn "ignoring conflict: #{m}" if r } }
+      .each{ |method_name| send(:define_method, method_name) {|*args| main_app.send(method_name, *args)} }
+  end
+  ::Thredded::ApplicationController.helper main_app_delegator
+end

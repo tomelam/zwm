@@ -1,3 +1,4 @@
+<% if !current_user.present? %>
 <!-- Header Carousel -->
 <header id="myCarousel" class="carousel slide">
     <!-- Indicators -->
@@ -37,9 +38,22 @@
         <span class="icon-next"></span>
     </a>
 </header>
+<% end %>
 
 <!-- Page Content -->
 <div class="container">
+
+    <% if current_user.present? %>
+    <h2>Welcome, <span style="color:red"><%= current_user.name %></span>! Here is your latest activity:</h2>
+    <%= Thredded::ApplicationController.render partial: 'thredded/users/posts', locals: {
+	  posts: Thredded.posts_page_view(scope: current_user.thredded_posts.order_newest_first.limit(5),
+					  current_user: current_user) } %>
+    <% else %>
+    <h2>Here is <span style="color:red"><%= User.first.name %></span>'s latest activity:</h2>
+    <%= Thredded::ApplicationController.render partial: 'thredded/users/posts', locals: {
+	  posts: Thredded.posts_page_view(scope: User.first.thredded_posts.order_newest_first.limit(5),
+					  current_user: current_user) } %>
+    <% end %>
 
     <!-- Marketing Icons Section -->
     <div class="row">
@@ -159,6 +173,7 @@
             </div>
         </div>
     </div>
+
 
 </div>
 <!-- /.container -->
