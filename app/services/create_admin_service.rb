@@ -4,6 +4,7 @@ class CreateAdminService
         user.password = Rails.application.secrets.admin_password
         user.password_confirmation = Rails.application.secrets.admin_password
         user.name = 'Admin'
+	user.moderator = true
         user.confirm
         user.admin!
       end
