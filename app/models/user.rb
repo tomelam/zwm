@@ -7,7 +7,8 @@ class User < ApplicationRecord
   end
 
   def thredded_admin?
-    self.role=(:admin)
+    #self.role==(:admin)
+    self.role=="admin"
   end
 
   def admin

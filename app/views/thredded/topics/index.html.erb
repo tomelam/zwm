@@ -1,0 +1,59 @@
+<%= stylesheet_link_tag "1st_load_framework", media: "all", "data-turbolinks-track" => "reload" %>
+<%= stylesheet_link_tag "custom", media: "all", "data-turbolinks-track" => "reload" %>
+
+<%# navigation styled for Bootstrap 3.0 %>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to 'Home', root_path, class: 'navbar-brand' %>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <%= render 'layouts/navigation_links' %>
+        <%= render 'layouts/nav_links_for_auth' %>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+<% content_for :thredded_page_title, messageboard.name %>
+<% content_for :thredded_page_id, 'thredded--topics-index' %>
+<% content_for :thredded_breadcrumbs, render('thredded/shared/breadcrumbs') %>
+
+<%= thredded_page do %>
+  <div class="thredded--svg-definitions ">
+    <%= inline_svg 'thredded/follow.svg', id: 'thredded-follow-icon', title: nil %>
+    <%= inline_svg 'thredded/unfollow.svg', id: 'thredded-unfollow-icon' %>
+  </div>
+
+  <%= content_tag :section, class: 'thredded--main-section thredded--topics', 'data-thredded-topics' => true do %>
+    <%= render 'thredded/topics/form',
+               messageboard: messageboard,
+               topic: @new_topic,
+               css_class: 'thredded--is-compact',
+               preview_url: preview_new_messageboard_topic_path(messageboard),
+               placeholder: t('thredded.topics.form.title_placeholder_start') if @new_topic %>
+    <%= render @topics %>
+  <% end %>
+
+  <footer class="thredded--pagination-bottom">
+    <%= paginate @topics %>
+  </footer>
+
+  <div class="thredded--messageboards--actions">
+    <% if policy(messageboard).update? %>
+      <a class="thredded--button" href="<%= edit_messageboard_path(messageboard) %>">
+        <%= t('thredded.nav.edit_messageboard') %>
+      </a>
+    <% end %>
+  </div>
+<% end %>
+</div>

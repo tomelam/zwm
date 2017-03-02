@@ -36,7 +36,7 @@ Thredded.avatar_url = ->(user) { Gravatar.src(user.email, 128, 'mm') }
 # The name of the moderator flag column on the users table.
 Thredded.moderator_column = :moderator
 # The name of the admin flag column on the users table.
-Thredded.admin_column = :admin
+# Thredded.admin_column = :admin
 
 # Whether posts and topics pending moderation are visible to regular users.
 Thredded.content_visible_while_pending_moderation = true
@@ -65,6 +65,7 @@ Thredded.email_outgoing_prefix = '[Zero-Waste Mysuru] '
 # ==> View Configuration
 # Set the layout for rendering the thredded views.
 Thredded.layout = 'thredded/application'
+# Thredded.layout = 'application'
 
 # ==> Post Content Formatting
 # Customize the way Thredded handles post formatting.
