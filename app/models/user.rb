@@ -11,6 +11,7 @@ class User < ApplicationRecord
     self.role=="admin"
   end
 
+  # FIXME: Probably this is nonsense.
   def admin
     self
   end
