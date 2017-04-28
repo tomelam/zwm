@@ -212,6 +212,14 @@ ActiveRecord::Schema.define(version: 20170301000000) do
     t.index ["user_id", "messageboard_id"], name: "thredded_user_messageboard_preferences_user_id_messageboard_id", unique: true
   end
 
+  create_table "thredded_user_post_notifications", force: :cascade do |t|
+    t.integer  "user_id",     null: false
+    t.integer  "post_id",     null: false
+    t.datetime "notified_at", null: false
+    t.index ["post_id"], name: "index_thredded_user_post_notifications_on_post_id"
+    t.index ["user_id", "post_id"], name: "index_thredded_user_post_notifications_on_user_id_and_post_id", unique: true
+  end
+
   create_table "thredded_user_preferences", force: :cascade do |t|
     t.integer  "user_id",                                 null: false
     t.boolean  "follow_topics_on_mention", default: true, null: false
