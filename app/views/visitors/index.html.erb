@@ -58,13 +58,13 @@
 <div class="container">
 
     <% if current_user.present? %>
-    <h2>Welcome, <span style="color:red"><%= current_user.name %></span>! Here are your latest posts:</h2>
+    <h2>Welcome, <%= current_user.name %>! Here are your latest posts:</h2>
     <%= Thredded::ApplicationController.render partial: 'thredded/users/posts', locals: {
 	  posts: Thredded.posts_page_view(scope: current_user.thredded_posts.order_newest_first.limit(5),
 					  current_user: current_user) } %>
     <% else %>
     <h2>Welcome to Zero-Waste Mysuru!</h2>
-    <h3><span style="color:red"><%= User.first.name %>'s</span> latest posts:</h3>
+    <h3><%= User.first.name %>'s latest posts:</h3>
     <%= Thredded::ApplicationController.render partial: 'thredded/users/posts', locals: {
 	  posts: Thredded.posts_page_view(scope: User.first.thredded_posts.order_newest_first.limit(5),
 					  current_user: current_user) } %>

@@ -51,5 +51,5 @@ group :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'launchy'
-  gem 'selenium-webdriver', '>= 3.3'
+  gem 'selenium-webdriver', '>= 3.4'
 end

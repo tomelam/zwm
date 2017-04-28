@@ -64,8 +64,8 @@ Thredded.email_outgoing_prefix = '[Zero-Waste Mysuru] '
 
 # ==> View Configuration
 # Set the layout for rendering the thredded views.
-Thredded.layout = 'thredded/application'
-# Thredded.layout = 'application'
+# Thredded.layout = 'thredded/application'
+Thredded.layout = 'application'
 
 # ==> Post Content Formatting
 # Customize the way Thredded handles post formatting.

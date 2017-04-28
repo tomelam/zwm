@@ -14,5 +14,22 @@
  *= require_self
  */
 
-@import "custom";
 @import "thredded";
+
+.thredded--main-container {
+  margin-left: 10px;
+  margin-right: 10px;
+  // The padding and max-width are handled by the app's container.
+  max-width: none;
+  padding: 0;
+  @include thredded-media-tablet-and-up {
+    padding: 0;
+  }
+}
+
+section.thredded--main-section {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+html { font-size: 100%; }
