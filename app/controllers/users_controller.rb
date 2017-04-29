@@ -1,10 +1,13 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
-  after_action :verify_authorized
+  before_action :authenticate_admin
+
+  def authenticate_admin
+      redirect_to '/', alert: 'Not authorized.' unless current_user && access_whitelist
+    end
 
   def index
     @users = User.all
-    authorize User
   end
 
   def show
@@ -30,6 +33,10 @@ class UsersController < ApplicationController
   end
 
   private
+
+  def access_whitelist
+    current_user.try(:admin?)
+  end
 
   def secure_params
     params.require(:user).permit(:role)
