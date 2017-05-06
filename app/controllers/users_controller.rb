@@ -1,9 +1,10 @@
 class UsersController < ApplicationController
+  include Pundit
   before_action :authenticate_user!
   before_action :authenticate_admin
 
   def authenticate_admin
-      redirect_to '/', alert: 'Not authorized.' unless current_user && access_whitelist
+      redirect_to '/', alert: 'Access denied.' unless current_user && access_whitelist
     end
 
   def index
@@ -26,9 +27,9 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    user = User.find(params[:id])
-    authorize user
-    user.destroy
+    @user = User.find(params[:id])
+    authorize @user
+    @user.destroy
     redirect_to users_path, :notice => "User deleted."
   end
 

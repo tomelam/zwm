@@ -13,9 +13,10 @@ feature 'User index page', :devise do
 
   # Scenario: User listed on index page
   #   Given I am signed in
+  #   And I have the role "admin"
   #   When I visit the user index page
   #   Then I see my own email address
-  scenario 'user sees own email address' do
+  scenario 'admin sees own email address' do
     user = FactoryGirl.create(:user, :admin)
     login_as(user, scope: :user)
     visit users_path

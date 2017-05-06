@@ -11,12 +11,16 @@ feature 'User profile page', :devise do
     Warden.test_reset!
   end
 
-  # Scenario: User sees own profile
+  ## CHANGED: It is not necessary for non-admin
+  ## users to use this route since there is
+  ## an account-editing route (/users/edit).
+  # Scenario: Admin sees own profile
   #   Given I am signed in
+  #   And I am an admin
   #   When I visit the user profile page
   #   Then I see my own email address
-  scenario 'user sees own profile' do
-    user = FactoryGirl.create(:user)
+  scenario 'admin sees own profile' do
+    user = FactoryGirl.create(:user, :admin, email: 'first_user@example.com')
     login_as(user, :scope => :user)
     visit user_path(user)
     expect(page).to have_content 'User'

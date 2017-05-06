@@ -14,7 +14,7 @@ module Admin
     # end
 
     def authenticate_admin
-      redirect_to '/', alert: 'Not authorized.' unless current_user && access_whitelist
+      redirect_to '/', alert: 'Access denied.' unless current_user && access_whitelist
     end
 
     # Override this value to specify the number of elements to display at a time
