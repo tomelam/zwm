@@ -53,3 +53,6 @@ group :test do
   gem 'launchy'
   gem 'selenium-webdriver', '>= 3.4'
 end
+group :development, :production do
+  gem 'unicorn'
+end

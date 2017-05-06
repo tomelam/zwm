@@ -6,7 +6,7 @@ set -e
 
 # app settings
 USER="rails"
-APP_NAME="mashwebclub"
+APP_NAME="zwm"
 APP_ROOT="/home/$USER/$APP_NAME"
 #ENV="development"
 ENV="development"
