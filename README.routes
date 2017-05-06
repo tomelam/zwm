@@ -1,0 +1,5 @@
+This application prints "ignoring conflict: root_path",
+"ignoring conflict: user_path", and "ignoring conflict: root_url"
+due to the inclusion of a snippet of code in
+config/initializers/thredded.rb . The code was suggested
+by Tim Diggins.
