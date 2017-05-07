@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users
 
-  match '*path', via: :all, to: redirect('/404')
+  #match '*path', via: :all, to: redirect('/404')
 end
