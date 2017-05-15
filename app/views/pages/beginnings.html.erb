@@ -1,0 +1,63 @@
+<!-- Page Content -->
+<!-- Header Carousel -->
+<header id="myCarousel" class="carousel slide">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <div class="fill" style="background-image:url(<%= asset_path 'Team_Zero-Waste_Mysuru.png' %>);"></div>
+            <div class="carousel-caption">
+                <h2>NAREDCO Team Zero-Waste Mysuru</h2>
+            </div>
+        </div>
+        <div class="item">
+            <div class="fill" style="background-image:url(<%= asset_path 'Sri_Ravi_4.jpg' %>);"></div>
+            <div class="carousel-caption">
+                <h2>NAREDCO Meet Sri Ravi</h2>
+            </div>
+        </div>
+        <div class="item">
+            <div class="fill" style="background-image:url(<%= asset_path 'Mrs_Nalini_Shekar_1.png' %>);"></div>
+            <div class="carousel-caption">
+                <h2>NAREDCO Meet Mrs Nalini Shekar</h2>
+            </div>
+        </div>
+        <div class="item">
+            <div class="fill" style="background-image:url(<%= asset_path 'Dr_Nagaraj_1.png' %>);"></div>
+            <div class="carousel-caption">
+                <h2>NAREDCO Meet MCC Health Officer, Dr Nagaraj</h2>
+            </div>
+        </div>
+        <div class="item">
+            <div class="fill" style="background-image:url(<%= asset_path 'Sri_Jagadish_1.png' %>);"></div>
+            <div class="carousel-caption">
+                <h2>NAREDCO Meet Sri Jagadish</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="icon-prev"></span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="icon-next"></span>
+    </a>
+</header>
+
+<!-- Script to Activate the Carousel -->
+<script>
+$(document).on('ready', function () {
+  $('.carousel').carousel({
+      interval: 4000 //changes the speed
+  })
+});
+</script>
